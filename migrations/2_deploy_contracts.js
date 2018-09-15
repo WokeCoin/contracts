@@ -2,11 +2,12 @@ const WokeToken = artifacts.require('./WokeToken.sol');
 const WokeCrowdsale = artifacts.require('./WokeCrowdsale.sol');
 
 module.exports = function(deployer, network, accounts) {
-    const openingTime = TBD;
-    const closingTime = TBD;
+    const openingTime = 'TBD';
+    const closingTime = 'TBD';
     const rate = new web3.BigNumber(10000);
-    const cap = web3.toWei(TBD, "ether"); // total ether contribution
-    const wallet = "TBD";
+    const cap = web3.toWei("1011.22299", "ether"); // total ether contribution
+    const wallet = "0x63aad63d30528edfb98bd630e8f1d31f4287a8ed";
+    const tenPercentWallet = "TBD";
 
     return deployer
         .then(() => {
@@ -20,6 +21,7 @@ module.exports = function(deployer, network, accounts) {
                 rate,
                 cap,
                 wallet,
+                tenPercentWallet,
                 WokeToken.address
             );
         })
