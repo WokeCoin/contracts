@@ -1,6 +1,6 @@
 const HDWalletProvider = require("truffle-hdwallet-provider-privkey");
 
-var ropstenKey = "";
+var privkey = "";
 
 module.exports = {
   networks: {
@@ -13,7 +13,7 @@ module.exports = {
     },
     ropsten: {
       provider: function() {
-        return new HDWalletProvider(ropstenKey, "https://ropsten.infura.io/");
+        return new HDWalletProvider(privkey, "https://ropsten.infura.io/");
       },
       gas: 4600000,
       gasPrice: 50 * 1000000000,
